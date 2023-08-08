@@ -53,13 +53,15 @@ body {
 }
 
 .form{
-    padding: 2em 0;
+    padding: 1em 0;
   
-    width: 50vh;
+    width: 70vh;
+    position: relative;
+    
 }
 
 .header{
-    padding: 0 0 1rem 0;
+    padding: 0 0 0.5rem 0;
 }
 
 #first,#second,#third,#fourth,#thank-you h1{
@@ -90,7 +92,7 @@ body {
     font-size: small;
     color: hsl(213, 96%, 18%);
     font-weight: 500;
-    padding: 1rem 0 0.5rem 0;
+    padding: 0.5rem 0 0 0;
  }
 
  form input{
@@ -109,7 +111,12 @@ body {
     /* display: none; */
     display: grid;
     grid-template-columns: 1fr;
-    padding: 2.5em 0;
+    align-content: start;
+    gap: 0.5rem;
+    padding: 3em 0;
+    position: absolute;
+    inset: 0px 0px 0px 0px;
+    z-index: 5;
  }
 
  #second{
@@ -118,6 +125,9 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2em;
+    position: absolute;
+    inset: 0px 0px 0px 500px;
+    z-index: 4;
  }
 
  #third{
@@ -125,6 +135,9 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2em;
+    position: absolute;
+    inset: 0px 0px 0px 500px;
+    z-index: 3;
     /* display: none; */
  }
 
@@ -133,6 +146,9 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2em;
+    position: absolute;
+    inset: 0px 0px 0px 500px;;
+    z-index: 2;
     /* display: none; */
  }
 
@@ -340,7 +356,12 @@ body {
  .button{
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
+    position: absolute;
+    inset: 430px 0px 0px 0px;
+    z-index: 6;
+
+
  }
 
  #btn-back{
@@ -363,6 +384,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+
+    position: absolute;
+    inset: 0px 0px 0px 500px;
+    z-index: 1;
 }
 
 #thank-you div{

@@ -73,7 +73,7 @@
             <label for="plan1"><div class="plan" id="border1" >
 
               <img src="assets/images/icon-arcade.svg" alt="" ><br><input type="radio" name="plan"
-                  id="plan1" onclick="border(), total(this.value)" value="09"><br> <span>Arcade</span><br>
+                  id="plan1" onclick="border(this.value), total(this.value)" value="09"><br> <span>Arcade</span><br>
 
               $9/month
             </div></label>
@@ -81,7 +81,7 @@
             <label for="plan2"><div class="plan" id="border2">
 
               <img src="assets/images/icon-advanced.svg" alt=""><br><input type="radio" name="plan"
-                  id="plan2" onclick="border(), total(this.value)" value="12"><br><span>Advanced</span><br>
+                  id="plan2" onclick="border(this.value), total(this.value)" value="12"><br><span>Advanced</span><br>
 
               $12/month
             </div></label>
@@ -90,7 +90,7 @@
               <div class="plan" id="border3">
 
               <img src="assets/images/icon-pro.svg" alt=""><br><input type="radio" name="plan"
-                  id="plan3"  onclick="border(), total(this.value)" value="15"><br> <span>Pro</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                  id="plan3"  onclick="border(this.value), total(this.value)" value="15"><br> <span>Pro</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
               
               $15/month
               
@@ -206,7 +206,10 @@
               <!-- <input type="checkbox" name="add-on-3" id="add-on-3"> -->
 
               <div class="add-on-left">
-
+                <div id="add-on-third"><div>Total (monthly)
+                </div>
+              
+                <div id="total-price">+$00/mo</div></div>
                 
               </div>
             </div>
