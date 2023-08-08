@@ -117,40 +117,106 @@ body {
     position: absolute;
     inset: 0px 0px 0px 0px;
     z-index: 5;
+    visibility: visible;
+    
  }
 
  #second{
-    /* display: none; */
+    display: none;
     padding: 2.5em 0;
-    display: grid;
+    /* display: grid; */
+    align-content: start;
     grid-template-columns: 1fr;
     gap: 2em;
     position: absolute;
-    inset: 0px 0px 0px 500px;
+    inset: 0px 0px 0px 0px;
     z-index: 4;
  }
 
  #third{
    padding: 2.5em 0;
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 1fr;
+    align-content: start;
     gap: 2em;
     position: absolute;
-    inset: 0px 0px 0px 500px;
+    inset: 0px 0px 0px 0px;
     z-index: 3;
-    /* display: none; */
+    display: none;
  }
 
  #fourth{
    padding: 2.5em 0;
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 1fr;
+    align-content: start;
     gap: 2em;
     position: absolute;
-    inset: 0px 0px 0px 500px;;
+    inset: 0px 0px 0px 0px;;
     z-index: 2;
-    /* display: none; */
+    display: none;
  }
+
+
+
+ #thank-you{
+   display: none;
+   font-size: 14px;
+   padding: 2.5em 0;
+    /* display: grid; */
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+    gap: 1rem;
+    position: absolute;
+    inset: 0px 0px 0px 0px;
+    z-index: 1;
+}
+
+#thank-you div{
+   text-align: center;
+   padding-top: 1rem;
+   
+}
+
+#thank-you img {
+   width: 60px;
+}
+
+
+
+
+
+.button{
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem 0;
+   position: absolute;
+   inset: 430px 0px 0px 0px;
+   z-index: 6;
+
+
+}
+
+#btn-back{
+   border: none;
+   background-color: transparent;
+}
+
+#btn-next{
+   background-color: hsl(213, 96%, 18%);
+   color: hsl(229, 24%, 87%);
+   border-radius: 5px;
+   padding: 0.5rem 1rem;
+}
+
+#btn-next input{
+   background-color: hsl(213, 96%, 18%);
+   color: hsl(229, 24%, 87%);
+   border-radius: 5px;
+   padding: 0.5rem 1rem;
+   border: none;
+}
 
  #plan{
     display: flex;
@@ -196,6 +262,7 @@ body {
     padding: 1em 0;
     background-color: hsl(231, 41%, 97%);
     border-radius: 5px;
+    width: 80%;
  }
 
 
@@ -315,7 +382,7 @@ body {
     position : relative ;
     display : inline-block;
     width : 50px;
-    height : 1px;
+    height : 15px;
     background-color: hsl(213, 96%, 18%);
     border-radius: 30px;
     border: 1px solid gray;
@@ -353,52 +420,9 @@ body {
 
 
 
- .button{
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-    position: absolute;
-    inset: 430px 0px 0px 0px;
-    z-index: 6;
-
-
- }
-
- #btn-back{
-    border: none;
-    background-color: transparent;
- }
-
- #btn-next{
-    background-color: hsl(213, 96%, 18%);
-    color: hsl(229, 24%, 87%);
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
- }
 
 
 
-#thank-you{
-   font-size: 13px;
-   padding: 2.5em 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-
-    position: absolute;
-    inset: 0px 0px 0px 500px;
-    z-index: 1;
-}
-
-#thank-you div{
-   text-align: center;
-   padding-top: 1rem;
-   
-}
-
-#thank-you img {
-   width: 60px;
-}
 
 
  .attribution {

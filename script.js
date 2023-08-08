@@ -743,4 +743,86 @@ const total_first3 = (price) => {
 };
 
 
+const btn = ()=>{
+ 
+  let btn_back = document.getElementById("btn-back");
 
+  btn_back.disabled = false;
+
+  let first = document.getElementById("first");
+  let second = document.getElementById("second");
+ 
+
+    first.style.visibility = "hidden";
+    second.style.display = "grid";
+    console.log("first")
+
+    let btn_class = document.getElementsByClassName("button")[0];
+
+    btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
+    <button id="btn-next" onclick="btn1()">Next Step</button>`
+  
+ 
+
+}
+
+const btn1 = ()=>{
+  let btn_next = document.getElementById("btn-next");
+  let btn_back = document.getElementById("btn-back");
+
+  btn_back.disabled = false;
+
+ 
+  let second = document.getElementById("second");
+  let third = document.getElementById("third");
+  
+
+    second.style.visibility = "hidden";
+    third.style.display = "grid";
+    console.log("first")
+
+    let btn_class = document.getElementsByClassName("button")[0];
+
+    btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
+    <button id="btn-next" onclick="btn2()">Next Step</button>`
+  
+}
+
+
+const btn2 = ()=>{
+  let btn_next = document.getElementById("btn-next");
+  let btn_back = document.getElementById("btn-back");
+
+  btn_back.disabled = false;
+ 
+  
+
+ 
+  let fourth = document.getElementById("fourth");
+  let third = document.getElementById("third");
+  
+
+    third.style.visibility = "hidden";
+    fourth.style.display = "grid";
+    console.log("first")
+
+    let btn_class = document.getElementsByClassName("button")[0];
+
+    btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
+    <button id="btn-next" onclick="btn3()" style = "padding: 0"><input type="submit" onclick="btn3" value="Confirm"></button>`
+  
+}
+
+const btn3 = () =>{
+  let fourth = document.getElementById("fourth");
+  let thankyou = document.getElementById("thank-you");
+
+  let btn_class = document.getElementsByClassName("button")[0];
+
+  btn_class.style.display = "none";
+  
+
+  fourth.style.visibility = "hidden";
+  thankyou.style.display = "grid";
+
+}
