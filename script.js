@@ -809,7 +809,7 @@ const btn2 = ()=>{
     let btn_class = document.getElementsByClassName("button")[0];
 
     btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
-    <button id="btn-next" onclick="btn3()" style = "padding: 0"><input type="submit" onclick="btn3" value="Confirm"></button>`
+    <button id="btn-next" onclick="btn3()">Confirm</button>`
   
 }
 
@@ -824,5 +824,6 @@ const btn3 = () =>{
 
   fourth.style.visibility = "hidden";
   thankyou.style.display = "grid";
+  setTimeout('document.getElementById("form").submit()', 2000);
 
 }
