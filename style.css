@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: hsl(217, 100%, 97%);
+    padding: 6em 15em;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: 140vh;
+    height: 70vh;
+    display: flex;
+    padding: 1em;
+    border-radius: 10px;
+    gap: 10rem;
+
+}
+
+.steps {
+    background: url(assets/images/bg-sidebar-desktop.svg);
+    border-radius: 10px;
+    padding: 2em 0;
+    
+
+}
+
+.steps ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 5em;
+    gap: 2em;
+}
+
+.steps ul li {
+   
+    list-style: none;
+    
+    color: hsl(229, 24%, 87%);
+    
+}
+
+.steps ul li div {
+    color: white;
+    
+}
+
+.form{
+    padding: 2em 0;
+  
+    width: 50vh;
+}
+
+.header{
+    padding: 0 0 1rem 0;
+}
+
+#first,#second,#third,#fourth,#thank-you h1{
+   color:  hsl(213, 96%, 18%)
+}
+#first p{
+    color:  hsl(231, 11%, 63%)
+    
+ }
+ #second p{
+    color:  hsl(231, 11%, 63%)
+    
+ }
+
+#third p{
+   color: hsl(231, 11%, 63%);
+}
+#fourth p{
+   color: hsl(231, 11%, 63%);
+}
+#thank-you p{
+   color:  hsl(231, 11%, 63%)
+   
+   
+}
+
+ form label{
+    font-size: small;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+    padding: 1rem 0 0.5rem 0;
+ }
+
+ form input{
+         height: 40px;
+         border: lightsteelblue solid;
+         border-radius: 10px;
+         border-color: hsl(229, 24%, 87%);     
+                  
+ }
+
+::placeholder{
+    text-indent: 10px;
+ }
+
+ #first{
+    /* display: none; */
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2.5em 0;
+ }
+
+ #second{
+    /* display: none; */
+    padding: 2.5em 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+ }
+
+ #third{
+   padding: 2.5em 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    /* display: none; */
+ }
+
+ #fourth{
+   padding: 2.5em 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    /* display: none; */
+ }
+
+ #plan{
+    display: flex;
+    gap: 1rem;
+    
+    
+ }
+
+ .plan{
+    color: hsl(229, 24%, 87%);
+    
+    padding: 1rem 3rem 1rem 1rem;
+    font-size: smaller;
+    width: max-content;
+
+ }
+
+ #border1{
+   border: 1px solid hsl(229, 24%, 87%);
+ }
+
+#border2{
+   border: 1px solid hsl(229, 24%, 87%);
+ }
+#border3{
+   border: 1px solid hsl(229, 24%, 87%);
+ }
+
+ .plan span{
+   color: hsl(213, 96%, 18%);
+    font-size: medium;
+ }
+
+ .plan input{
+    visibility: hidden;
+ }
+
+ #plan-selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0;
+    background-color: hsl(231, 41%, 97%);
+    border-radius: 5px;
+ }
+
+
+ #add-ons{
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1em;
+
+ }
+
+ #add-on-first{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+ }
+
+ #add-on-second{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+ }
+
+ #add-on-third{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+ }
+
+ #summary{
+   display: grid;
+   grid-template-columns: 1fr;
+   /* gap: 1em; */
+
+ }
+
+ .add-on{
+   display: flex;
+   color: hsl(229, 24%, 87%);
+   border: 1px solid hsl(229, 24%, 87%);
+   padding: 1rem 3rem 1rem 1rem;
+   font-size: smaller;
+   border-radius: 10px;
+   gap: 1rem;
+}
+
+.add-on{
+   display: flex;
+   color: hsl(229, 24%, 87%);
+   border: 1px solid hsl(229, 24%, 87%);
+   padding: 1rem 3rem 1rem 1rem;
+   font-size: smaller;
+   border-radius: 10px;
+   gap: 1rem;
+}
+
+.add-on-summary{
+   display: flex;
+   color: hsl(229, 24%, 87%);
+   border: 1px solid hsl(229, 24%, 87%);
+   padding: 1rem 3rem 1rem 1rem;
+   font-size: smaller;
+   border-radius: 10px;
+   gap: 1rem;
+}
+
+.plan-summary{
+   display: flex;
+   color: hsl(229, 24%, 87%);
+   border: 1px solid hsl(229, 24%, 87%);
+   padding: 1rem 3rem 1rem 1rem;
+   font-size: smaller;
+   border-radius: 10px;
+   gap: 1rem;
+}
+
+.total{
+   
+      display: flex;
+      color: hsl(229, 24%, 87%);
+      border: 1px solid hsl(229, 24%, 87%);
+      padding: 1rem 3rem 1rem 1rem;
+      font-size: smaller;
+      border-radius: 10px;
+      gap: 1rem;
+   
+}
+
+.add-on-left{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   
+}
+
+.prices{
+   color: hsl(243, 100%, 62%);
+}
+
+.price-plan{
+   color: hsl(243, 100%, 62%);
+}
+
+#total-price{
+   
+      color: hsl(243, 100%, 62%);
+   
+}
+.total-price{
+   color: hsl(243, 100%, 62%);
+}
+
+ .toggle {
+    position : relative ;
+    display : inline-block;
+    width : 50px;
+    height : 1px;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 30px;
+    border: 1px solid gray;
+}
+       
+/* After slide changes */
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    top: 5px;
+    left: 1px;
+    transition:  all 0.5s;
+}
+
+
+
+.checkbox:checked + .toggle::after {
+    left : 35px;
+}
+       
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+    background-color: hsl(213, 96%, 18%);
+}
+       
+/* Checkbox vanished */
+.checkbox {
+    display : none;
+}
+
+
+
+
+ .button{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+ }
+
+ #btn-back{
+    border: none;
+    background-color: transparent;
+ }
+
+ #btn-next{
+    background-color: hsl(213, 96%, 18%);
+    color: hsl(229, 24%, 87%);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+ }
+
+
+
+#thank-you{
+   font-size: 13px;
+   padding: 2.5em 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#thank-you div{
+   text-align: center;
+   padding-top: 1rem;
+   
+}
+
+#thank-you img {
+   width: 60px;
+}
+
+
+ .attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
