@@ -13,21 +13,21 @@ const toggle = () => {
     let add_on3 = document.getElementsByClassName("add-on")[2];
 
 
-    plan1.innerHTML = ` <img src="assets/images/icon-arcade.svg" alt=""><br><input type="radio" name="plan"
-        id="plan1" onclick="border(this.value), total(this.value)" value="90"><br> <span>Arcade</span><br>
+    plan1.innerHTML = `<div> <img src="assets/images/icon-arcade.svg" alt=""></div><div><input type="radio" name="plan"
+        id="plan1" onclick="border(this.value), total(this.value)" value="90"></div> <div><span>Arcade</span><br>
         $90/year<br>
-        2 months free`;
+        2 months free</div>`;
 
-    plan2.innerHTML = `<img src="assets/images/icon-advanced.svg" alt=""><br><input type="radio" name="plan"
-        id="plan2" onclick="border(this.value), total(this.value)" value="120"><br><span>Advanced</span><br>
+    plan2.innerHTML = `<div><img src="assets/images/icon-advanced.svg" alt=""></div> <div><input type="radio" name="plan"
+        id="plan2" onclick="border(this.value), total(this.value)" value="120"></div> <div><span>Advanced</span><br>
 
     $120/year<br>
-    2 months free`;
-    plan3.innerHTML = `<img src="assets/images/icon-pro.svg" alt=""><br><input type="radio" name="plan"
-    id="plan3" onclick="border(this.value), total(this.value)" value="150"><br> <span>Pro</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+    2 months free</div>`;
+    plan3.innerHTML = `<div><img src="assets/images/icon-pro.svg" alt=""></div><div><input type="radio" name="plan"
+    id="plan3" onclick="border(this.value), total(this.value)" value="150"></div><div> <span>Pro</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
 
 $150/year<br>
-2 months free
+2 months free</div>
 `;
 
 
@@ -86,18 +86,18 @@ add_on3.innerHTML = `<input type="checkbox" name="add-on-3" id="add-on-3" onclic
 
 
     console.log("unchecked");
-    plan1.innerHTML = `<img src="assets/images/icon-arcade.svg" alt=""><br><input type="radio" name="plan"
-    id="plan1" onclick="border(this.value), total(this.value)" value="09"><br> <span>Arcade</span><br>
+    plan1.innerHTML = `<div><img src="assets/images/icon-arcade.svg" alt=""></div><div><input type="radio" name="plan"
+    id="plan1" onclick="border(this.value), total(this.value)" value="09"></div><div><span>Arcade</span><br>
 
-$09/month`;
-    plan2.innerHTML = ` <img src="assets/images/icon-advanced.svg" alt=""><br><input type="radio" name="plan"
-    id="plan2" onclick="border(this.value), total(this.value)" value="12"><br><span>Advanced</span><br>
+$09/month</div>`;
+    plan2.innerHTML = ` <div><img src="assets/images/icon-advanced.svg" alt=""></div><div><input type="radio" name="plan"
+    id="plan2" onclick="border(this.value), total(this.value)" value="12"></div><div><span>Advanced</span><br>
 
-$12/month`;
-    plan3.innerHTML = `<img src="assets/images/icon-pro.svg" alt=""><br><input type="radio" name="plan"
-    id="plan3" onclick="border(this.value), total(this.value)" value="15"><br> <span>Pro</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+$12/month</div>`;
+    plan3.innerHTML = `<div><img src="assets/images/icon-pro.svg" alt=""></div><div><input type="radio" name="plan"
+    id="plan3" onclick="border(this.value), total(this.value)" value="15"></div><div> <span>Pro</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
 
-$15/month`;
+$15/month</div>`;
 
 
 add_on1.innerHTML = `<input type="checkbox" name="add-on-1" id="add-on-1" onclick="add_on_1(1), total_first1(this.value)" value="1">
@@ -762,7 +762,13 @@ const btn = ()=>{
     btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
     <button id="btn-next" onclick="btn1()">Next Step</button>`
   
- 
+ let number = document.querySelector("#numbers :nth-child(1)");
+number.style.color = "white";
+number.style.backgroundColor = "transparent";
+
+let number_next = document.querySelector("#numbers :nth-child(2)");
+number_next.style.color = "black";
+number_next.style.backgroundColor = "hsl(206, 94%, 87%)";
 
 }
 
@@ -785,6 +791,14 @@ const btn1 = ()=>{
 
     btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
     <button id="btn-next" onclick="btn2()">Next Step</button>`
+
+    let number = document.querySelector("#numbers :nth-child(2)");
+    number.style.color = "white";
+    number.style.backgroundColor = "transparent";
+    
+    let number_next = document.querySelector("#numbers :nth-child(3)");
+    number_next.style.color = "black";
+    number_next.style.backgroundColor = "hsl(206, 94%, 87%)";
   
 }
 
@@ -810,6 +824,14 @@ const btn2 = ()=>{
 
     btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
     <button id="btn-next" onclick="btn3()">Confirm</button>`
+
+    let number = document.querySelector("#numbers :nth-child(3)");
+    number.style.color = "white";
+    number.style.backgroundColor = "transparent";
+    
+    let number_next = document.querySelector("#numbers :nth-child(4)");
+    number_next.style.color = "black";
+    number_next.style.backgroundColor = "hsl(206, 94%, 87%)";
   
 }
 
@@ -817,13 +839,21 @@ const btn3 = () =>{
   let fourth = document.getElementById("fourth");
   let thankyou = document.getElementById("thank-you");
 
-  let btn_class = document.getElementsByClassName("button")[0];
+  let footer = document.getElementById("footer");
 
-  btn_class.style.display = "none";
+  footer.style.display = "none";
   
 
   fourth.style.visibility = "hidden";
   thankyou.style.display = "grid";
   setTimeout('document.getElementById("form").submit()', 2000);
 
+  let number = document.querySelector("#numbers :nth-child(4)");
+  number.style.color = "white";
+  number.style.backgroundColor = "transparent";
+  
+
+
 }
+
+

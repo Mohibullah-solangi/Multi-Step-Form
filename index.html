@@ -23,6 +23,12 @@
 
   <div class="container">
     <div class="steps">
+      <div id="numbers">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
       <ul>
         <li>
           STEP 1
@@ -68,33 +74,45 @@
             <h1>Select your plan</h1><br>
             <p>You have the option of monthly or yearly billing.</p>
           </div>
+
+
           <div id="plan">
 
-            <label for="plan1"><div class="plan" id="border1" >
+            <label for="plan1">
+              
+              <div class="plan" id="border1" >
 
-              <img src="assets/images/icon-arcade.svg" alt="" ><br><input type="radio" name="plan"
-                  id="plan1" onclick="border(this.value), total(this.value)" value="09"><br> <span>Arcade</span><br>
+              <div><img src="assets/images/icon-arcade.svg" alt="" ></div>
+              <div><input type="radio" name="plan"
+                id="plan1" onclick="border(this.value), total(this.value)" value="09"></div>
+              <div><div>Arcade</div><div>$9/month</div> </div>
+            
+            </div>
+          </label>
 
-              $9/month
-            </div></label>
+            <label for="plan2">
+              
+              <div class="plan" id="border2">
 
-            <label for="plan2"><div class="plan" id="border2">
-
-              <img src="assets/images/icon-advanced.svg" alt=""><br><input type="radio" name="plan"
-                  id="plan2" onclick="border(this.value), total(this.value)" value="12"><br><span>Advanced</span><br>
-
-              $12/month
-            </div></label>
+                <div><img src="assets/images/icon-advanced.svg" alt=""></div>
+                <div><input type="radio" name="plan"
+                  id="plan2" onclick="border(this.value), total(this.value)" value="12"></div>
+                <div><div>Advanced</div><div>$12/month</div></div>
+              
+            </div>
+          </label>
 
             <label for="plan3">
+
               <div class="plan" id="border3">
 
-              <img src="assets/images/icon-pro.svg" alt=""><br><input type="radio" name="plan"
-                  id="plan3"  onclick="border(this.value), total(this.value)" value="15"><br> <span>Pro</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                <div><img src="assets/images/icon-pro.svg" alt=""></div>
+                <div><input type="radio" name="plan"
+                  id="plan3"  onclick="border(this.value), total(this.value)" value="15"></div>
+                <div><div>Pro</div> <div>$15/month</div></div>
               
-              $15/month
-              
-            </div></label>
+            </div>
+          </label>
 
           </div>
           <div id="plan-selection">
@@ -134,7 +152,7 @@
                   Access to multiplayer games
                 </div>
 
-                <div class="prices">$1/month</div>
+                <div class="prices">$1/mo</div>
               </div>
             </div>
 
@@ -149,7 +167,7 @@
                   Extra 1TB of cloud save
                 </div>
 
-                <div class="prices">$2/month</div>
+                <div class="prices">$2/mo</div>
               </div>
             </div>
 
@@ -164,7 +182,7 @@
                   Custom theme on your profile
                 </div>
 
-                <div class="prices">$2/month</div>
+                <div class="prices">$2/mo</div>
               </div>
             </div>
 
@@ -220,11 +238,7 @@
         </div>
 
       </form>
-      <div class="button">
-        <button id="btn-back" disabled>go back</button>
-        <button id="btn-next" onclick="btn()">Next Step</button>
-        
-      </div>
+     
 
       <div id="thank-you">
         
@@ -344,7 +358,12 @@
   to email us at support@loremgaming.com. -->
 
   <!-- Step 5 end -->
-  <footer>
+  <footer id="footer">
+    <div class="button">
+      <button id="btn-back" disabled>go back</button>
+      <button id="btn-next" onclick="btn()">Next Step</button>
+      
+    </div>
     <!-- <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://mohibullah-solangi.github.io/Portfolio/">Mohib ullah</a>.

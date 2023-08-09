@@ -10,14 +10,14 @@ body {
 
    font-family: 'Poppins', sans-serif;
    font-family: 'Ubuntu', sans-serif;
-    padding: 10em ;
+   padding: 10em;
 
 }
 
 
 .container {
    background-color: hsl(0, 0%, 100%);
-   padding: 1em 3em 1em 1em;
+   padding: 1em 5em 1em 1em;
    border-radius: 10px;
    width: 80%;
    display: flex;
@@ -32,29 +32,52 @@ body {
    border-radius: 10px;
    padding: 2em 0;
    width: 30%;
+   display: flex;
 }
+
+.steps > div{
+   display: grid;
+   grid-template-columns: 1fr;
+   padding: 0 1.2rem 0 2rem;
+   align-content: start;
+   gap: 2.2em;
+   color: white;
+   font-size: small;
+}
+
+#numbers div{
+   border: 1px solid white;
+   border-radius: 50%;
+   padding: 0.75em;
+}
+
+#numbers :nth-child(1){
+   background-color: hsl(206, 94%, 87%);
+   color: black;
+}
+
 
 .steps ul {
    display: grid;
    grid-template-columns: 1fr;
-   padding: 0 5em;
-   gap: 2em;
+   padding: 0 0;
+   align-content: start;
+   gap: 2.3em;
+
+   
 }
 
 .steps ul li {
 
    list-style: none;
-
    color: hsl(229, 24%, 87%);
+   font-size: small;
 
 }
-/* 
-.steps ul::before{
-   content: "1 2 3 4 7  8    9";
-} */
 
 .steps ul li div {
    color: white;
+   font-size: small;
 
 }
 
@@ -62,14 +85,14 @@ body {
 
    padding: 1em 0;
    position: relative;
-   width: 70%;
+   width: 40%;
 
 
 }
 
 .header {
    padding: 0 0 0.5rem 0;
-  
+
 }
 
 #first,
@@ -105,6 +128,7 @@ form label {
    color: hsl(213, 96%, 18%);
    font-weight: 500;
    padding: 0.5rem 0 0 0;
+   flex-shrink: 0;
 }
 
 form input {
@@ -201,11 +225,12 @@ form input {
 
 .button {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
+   gap: 15em;
    padding: 1rem 0;
    position: absolute;
-   inset: 430px 0px 0px 0px;
-   z-index: 6;
+  inset: 610px 0px 30px 100px;
+  z-index: 10;
 }
 
 #btn-back {
@@ -231,16 +256,16 @@ form input {
 #plan {
    display: flex;
    gap: 1rem;
-
-
 }
+
+
 
 .plan {
    color: hsl(229, 24%, 87%);
 
    padding: 1rem 3rem 1rem 1rem;
    font-size: smaller;
-   width: max-content;
+  
 
 }
 
@@ -440,20 +465,21 @@ form input {
    color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 376px) {
 
-body{
-   padding: 0;
-   background-color: hsl(0, 0%, 100%);
-   
-}
+   body {
+      padding: 0;
+      background-color: hsl(0, 0%, 100%);
+
+   }
+
    .container {
       background-color: hsl(217, 100%, 97%);
       flex-direction: column;
       padding: 0;
       width: 100%;
-     
-     
+
+
    }
 
    .steps {
@@ -461,26 +487,45 @@ body{
       background-repeat: no-repeat;
       padding: 0;
       width: 100%;
+      display: block;
+   
+   }
+
+   #numbers{
+      display: flex;
+      align-items: flex-start;
+      padding: 2em 0;
+      justify-content: center;
+     
    }
 
    .steps ul {
       display: flex;
-      
+
       padding: 0 0.5em;
       height: 170px;
-     
-      
+
+
    }
-/* 
+   .header {
+      padding: 0 0 0 0;
+   
+   }
+
+   .header h1{
+      font-size: larger;
+   }
+
+   
    .steps ul li {
 
       display: none;
 
-   } */
+   }
 
-   .form{
+   .form {
       width: 90%;
-      
+
    }
 
 
@@ -490,7 +535,7 @@ body{
       grid-template-columns: 1fr;
       align-content: start;
       gap: 0.5rem;
-      padding: 2em;
+      padding: 5em 1em;
       position: absolute;
       inset: -320px -25px -130px 10px;
       z-index: 5;
@@ -505,7 +550,7 @@ body{
       /* display: grid; */
       align-content: start;
       grid-template-columns: 1fr;
-      gap: 2em;
+      gap: 0.5em;
       padding: 2em;
       position: absolute;
       inset: -320px -25px -130px 10px;
@@ -555,29 +600,58 @@ body{
       gap: 1rem;
       padding: 2em;
       position: absolute;
-      inset: -250px -25px -130px 10px;
+      inset: -320px -25px -130px 10px;
       z-index: 1;
       background-color: hsl(0, 0%, 100%);
    }
 
    #plan {
-      
-    display: grid;
-    grid-template-columns: 1fr;
-   
+
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+
+   }
+   #plan-selection {
+      font-size: small;
+      gap: 0.5em;
+      padding: 0.5rem 0;
+      width: 100%;
    }
 
-   #border1,#border2,#border3{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr)
+   #border1,
+   #border2,
+   #border3 {
+   
+      display: flex;
    }
+
+   #border1>div:nth-child(3)>div:nth-child(1),
+   #border2>div:nth-child(3)>div:nth-child(1),
+   #border3>div:nth-child(3)>div:nth-child(1) {
+      color: blue;
+   }
+   .add-on :nth-child(2){
+      flex-shrink: 0;
+      
+   }
+
+   .add-on-left :nth-child(1){
+      flex-shrink: 0;
+   }
+
+   .add-on-left div{
+      font-size: smaller;
+   }
+   
+  
 
    .button {
       display: flex;
       justify-content: space-between;
-     padding: 2em;
-      position: absolute;
-      inset: 75px -30px -150px 0px;
-      z-index: 6;
+      gap: 5em;
+      padding: 2em;
+      position: relative;
+      inset: 150px 0 0 0;
    }
 }
