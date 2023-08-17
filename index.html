@@ -58,13 +58,14 @@
             <h1>Personal info</h1><br>
             <p>Please provide your name, email address, and phone number.</p>
           </div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder=" e.g. Stephen King" required>
+          
+          <label for="name" >Name</label>
+          <input type="text" id="name" name="name" value="" onchange="validate(this.value)"  placeholder=" e.g. Stephen King" required>
           <label for="email">Email Address</label>
-          <input type="email" id="email" email="email" placeholder=" e.g. stephenking@lorem.com" required>
+          <input type="email" id="email" email="email" value="" onchange="validate(this.value)" placeholder=" e.g. stephenking@lorem.com" required>
           <label for="number">Phone Number</label>
-          <input type="tel" id="number" number="number" placeholder=" e.g. +92 333 567 8901" required>
-
+          <input type="tel" id="number" number="number" value="" onchange="validate(this.value)" placeholder=" e.g. +92 333 567 8901" required>
+        
         </div>
 
 
@@ -364,10 +365,15 @@
       <button id="btn-next" onclick="btn()">Next Step</button>
       
     </div>
-    <!-- <div class="attribution">
+    <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://mohibullah-solangi.github.io/Portfolio/">Mohib ullah</a>.
-    </div> -->
+      Coded by <a href="https://mohibullah-solangi.github.io/Portfolio/">Mohib ullah</a>. <br><br>
+      <p>This challenge is only made for 2 screen-sizes i.e. <br><br>
+        "
+        - Mobile: 375px <br>
+        - Desktop: 1440px
+        "</p>
+    </div>
   </footer>
 
 </body>

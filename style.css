@@ -23,6 +23,7 @@ body {
    display: flex;
    height: 500px;
    gap: 10em;
+   box-shadow: 5px 5px 5px grey;
 }
 
 .steps {
@@ -33,6 +34,7 @@ body {
    padding: 2em 0;
    width: 30%;
    display: flex;
+  
 }
 
 .steps > div{
@@ -130,6 +132,18 @@ form label {
    padding: 0.5rem 0 0 0;
    flex-shrink: 0;
 }
+label[for=name]::after{
+   content: " *";
+   color: red;
+}
+label[for=email]::after{
+   content: " *";
+   color: red;
+}
+label[for=number]::after{
+   content: " *";
+   color: red;
+}
 
 form input {
    height: 40px;
@@ -221,8 +235,6 @@ form input {
 
 
 
-
-
 .button {
    display: flex;
    justify-content: center;
@@ -232,6 +244,7 @@ form input {
   inset: 610px 0px 30px 100px;
   z-index: 10;
 }
+
 
 #btn-back {
    border: none;
@@ -243,6 +256,10 @@ form input {
    color: hsl(229, 24%, 87%);
    border-radius: 5px;
    padding: 0.5rem 1rem;
+}
+
+#btn-back,#btn-next:hover{
+   cursor: pointer;
 }
 
 #btn-next input {
@@ -456,9 +473,10 @@ form input {
 
 
 .attribution {
-   font-size: 11px;
+   font-size: 10px;
    text-align: center;
    padding: 2rem;
+   margin-top: 10em;
 }
 
 .attribution a {
@@ -652,6 +670,6 @@ form input {
       gap: 5em;
       padding: 2em;
       position: relative;
-      inset: 150px 0 0 0;
+      inset: 10px 0 0 0;
    }
 }

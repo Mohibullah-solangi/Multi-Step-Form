@@ -745,13 +745,24 @@ const total_first3 = (price) => {
 
 const btn = ()=>{
  
-  let btn_back = document.getElementById("btn-back");
 
-  btn_back.disabled = false;
 
   let first = document.getElementById("first");
   let second = document.getElementById("second");
  
+  
+  let name_val = document.getElementById("name").value;
+  let email_val = document.getElementById("email").value;
+  let phone_val = document.getElementById("number").value;
+  let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  let phone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  let btn_back = document.getElementById("btn-back");
+
+  if((name_val !== "" && name_val.length>= 3) && (email_val !== "" && mailformat.test(email_val)) && (phone.test(phone_val))){
+
+    
+
+    btn_back.disabled = false;
 
     first.style.visibility = "hidden";
     second.style.display = "grid";
@@ -769,36 +780,56 @@ number.style.backgroundColor = "transparent";
 let number_next = document.querySelector("#numbers :nth-child(2)");
 number_next.style.color = "black";
 number_next.style.backgroundColor = "hsl(206, 94%, 87%)";
+  }
+
+  else(
+    alert("Please Enter your complete details to proceed")
+  )
+  
 
 }
 
 const btn1 = ()=>{
   let btn_next = document.getElementById("btn-next");
-  let btn_back = document.getElementById("btn-back");
-
-  btn_back.disabled = false;
+  
 
  
   let second = document.getElementById("second");
   let third = document.getElementById("third");
-  
+
+  let plan1 = document.getElementById("plan1")
+  let plan2 = document.getElementById("plan2")
+  let plan3 = document.getElementById("plan3")
+  console.log(plan1)
+
+  if (plan1.checked ==  true  || plan2.checked == true || plan3.checked == true){ 
+    
+
+    let btn_back = document.getElementById("btn-back");
+
+    btn_back.disabled = false;
 
     second.style.visibility = "hidden";
-    third.style.display = "grid";
-    console.log("first")
+  third.style.display = "grid";
+  console.log("first")
 
-    let btn_class = document.getElementsByClassName("button")[0];
+  let btn_class = document.getElementsByClassName("button")[0];
 
-    btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
-    <button id="btn-next" onclick="btn2()">Next Step</button>`
+  btn_class.innerHTML = ` <button id="btn-back" disabled>go back</button>
+  <button id="btn-next" onclick="btn2()">Next Step</button>`
 
-    let number = document.querySelector("#numbers :nth-child(2)");
-    number.style.color = "white";
-    number.style.backgroundColor = "transparent";
-    
-    let number_next = document.querySelector("#numbers :nth-child(3)");
-    number_next.style.color = "black";
-    number_next.style.backgroundColor = "hsl(206, 94%, 87%)";
+  let number = document.querySelector("#numbers :nth-child(2)");
+  number.style.color = "white";
+  number.style.backgroundColor = "transparent";
+  
+  let number_next = document.querySelector("#numbers :nth-child(3)");
+  number_next.style.color = "black";
+  number_next.style.backgroundColor = "hsl(206, 94%, 87%)";}
+
+  else{
+    alert("Select One option to proceed")
+  }
+   
   
 }
 
@@ -816,6 +847,7 @@ const btn2 = ()=>{
   let third = document.getElementById("third");
   
 
+  
     third.style.visibility = "hidden";
     fourth.style.display = "grid";
     console.log("first")
@@ -847,6 +879,7 @@ const btn3 = () =>{
   fourth.style.visibility = "hidden";
   thankyou.style.display = "grid";
   setTimeout('document.getElementById("form").submit()', 2000);
+  console.log("submited")
 
   let number = document.querySelector("#numbers :nth-child(4)");
   number.style.color = "white";
@@ -855,5 +888,6 @@ const btn3 = () =>{
 
 
 }
+
 
 
