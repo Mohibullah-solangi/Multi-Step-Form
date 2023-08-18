@@ -483,7 +483,104 @@ form input {
    color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (max-width: 376px) {
+
+@media only screen and (max-width: 1024px){
+   .steps > div{
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0 1.2rem 0 2rem;
+      align-content: start;
+      gap: 2.6em;
+      
+      font-size: x-small;
+   }
+
+   .steps ul li {
+
+      list-style: none;
+      color: hsl(229, 24%, 87%);
+      font-size: xx-small;
+   
+   }
+   .steps ul li div{
+
+      
+      font-size: x-small;
+   
+   }
+
+   .button{
+      gap: 8em;
+      position: absolute;
+      inset: 610px 0px 30px 160px;
+   }
+
+   .container {
+      gap: 6em
+
+
+   }
+
+   .header{
+      font-size: small;
+   }
+
+   #second{
+      font-size: small;
+      gap: 0.5rem
+   }
+
+   .plan {
+      color: hsl(229, 24%, 87%);
+      padding: 1rem 1rem 1rem 1rem;
+      font-size: smaller;
+  }
+
+  #plan-selection {
+   margin-left: 2em;
+  }
+
+  .add-on{
+   font-size: x-small;
+  }
+
+  form label{
+   font-size: 11px;
+   margin-bottom: 0.5rem;
+  }
+}
+
+
+@media only screen and (max-width: 768px){
+   .steps ul li {
+
+      display: none;
+
+   }
+   .container {
+      gap: 2em;
+  
+
+  }
+
+  .button{
+   gap: 5em;
+   position: absolute;
+   inset: 610px 0px 30px 100px;
+ 
+}
+
+#third{
+   gap: 0.5rem
+}
+
+#add-ons{
+   gap: 0.5rem;
+}
+
+}
+
+@media only screen and (max-width: 430px) {
 
    body {
       padding: 0;
@@ -502,7 +599,7 @@ form input {
 
    .steps {
       background: url(assets/images/bg-sidebar-mobile.svg);
-      background-repeat: no-repeat;
+      background-repeat: repeat;
       padding: 0;
       width: 100%;
       display: block;
@@ -555,10 +652,11 @@ form input {
       gap: 0.5rem;
       padding: 5em 1em;
       position: absolute;
-      inset: -320px -25px -130px 10px;
+      inset: -200px -25px -130px 10px;
       z-index: 5;
       visibility: visible;
       background-color: hsl(0, 0%, 100%);
+      height: max-content;
 
    }
 
@@ -571,7 +669,7 @@ form input {
       gap: 0.5em;
       padding: 2em;
       position: absolute;
-      inset: -320px -25px -130px 10px;
+      inset: -200px -25px -130px 10px;
       z-index: 1;
       background-color: hsl(0, 0%, 100%);
    }
@@ -584,7 +682,7 @@ form input {
       gap: 2em;
       padding: 2em;
       position: absolute;
-      inset: -320px -25px -130px 10px;
+      inset: -200px -25px -130px 10px;
       z-index: 3;
       display: none;
       background-color: hsl(0, 0%, 100%);
@@ -598,7 +696,7 @@ form input {
       gap: 2em;
       padding: 2em;
       position: absolute;
-      inset: -320px -25px -130px 10px;
+      inset: -200px -25px -130px 10px;
       ;
       z-index: 2;
       display: none;
@@ -618,7 +716,7 @@ form input {
       gap: 1rem;
       padding: 2em;
       position: absolute;
-      inset: -320px -25px -130px 10px;
+      inset: -200px -25px -130px 10px;
       z-index: 1;
       background-color: hsl(0, 0%, 100%);
    }
@@ -635,6 +733,8 @@ form input {
       gap: 0.5em;
       padding: 0.5rem 0;
       width: 100%;
+      margin: 0;
+      margin-top: 0.2rem;
    }
 
    #border1,
